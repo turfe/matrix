@@ -131,10 +131,8 @@ public:
                         continue;
                     for (int j = k; j < n; ++j) {
                         backup.matrix[k][j] *= (tmp1 / tmp3);
-                        std::cout << backup << std::endl;
                         backup.matrix[i][j] *= (tmp1 / tmp2);
                         backup.matrix[i][j] -= backup.matrix[k][j];
-                        std::cout << backup << std::endl;
                     }
                     divider *= (tmp1 / tmp2);
                     backup.matrix[k][k] /= (tmp1 / tmp2);
