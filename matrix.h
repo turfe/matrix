@@ -96,7 +96,7 @@ public:
     };
 
     void swap_rows(Matrix &inc_matrix, int i, int j) {
-        for (int k = i + 1; k < n; ++k) {
+        for (int k = i ; k < n; ++k) {
             T tmp = inc_matrix.matrix[i][k];
             inc_matrix.matrix[i][k] = inc_matrix.matrix[j][k];
             inc_matrix.matrix[j][k] = tmp;
@@ -119,6 +119,8 @@ public:
                         swap_rows(backup, k, l);
                         if ((l - k) % 2 == 1)
                             divider *= -1;
+                        k--;
+                        break;
                     }
                 }
             } else {
