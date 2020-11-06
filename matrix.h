@@ -108,7 +108,6 @@ public:
         Matrix<T> backup(*this);
         T divider = static_cast<T>(1);
         T determinant;
-        int sign = 1;
         for (int k = 0; k < n - 1; ++k) {
             if (backup.matrix[k][k] == 0) {
                 for (int l = k + 1; l < n; ++l) {
@@ -144,7 +143,7 @@ public:
             composition *= backup.matrix[i][i];
         }
 
-        determinant = sign * composition / divider;
+        determinant = composition / divider;
         return determinant;
     }
 

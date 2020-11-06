@@ -9,7 +9,6 @@ int main() {
     Matrix<int> m(n);
     std::cin >> m;
 
-    std::cout << m << std::endl;
     std::cout << m.determinant() << std::endl;
 
     return 0;
