@@ -135,8 +135,9 @@ public:
                         backup.matrix[i][j] *= (tmp1 / tmp2);
                         backup.matrix[i][j] -= backup.matrix[k][j];
                     }
+
                     divider *= (tmp1 / tmp2);
-                    backup.matrix[k][k] /= (tmp1 / tmp2);
+                    backup.matrix[k][k] /= (tmp1 / tmp3);
                 }
             }
         }
